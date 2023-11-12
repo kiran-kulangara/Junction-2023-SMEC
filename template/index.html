@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eye Tracking Data Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Eye Tracking Data Visualization</h1>
+    <div id="plot"></div>
+    <script>
+        var graphs = {{ graphJSON | safe }};
+        Plotly.newPlot('plot', graphs.data, graphs.layout);
+    </script>
+</body>
+</html>
